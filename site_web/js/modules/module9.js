@@ -3,12 +3,12 @@ window.MODULES = window.MODULES || [];
 window.MODULES.push({
   id: 'demo-agent',
   number: 'Quête secondaire',
-  title: "🎮 Démo : un agent LLM que tu peux tester",
+  title: "Démo : un agent LLM que tu peux tester",
   status: 'completed',
   questions: [
     {
-      q: "Qu'est-ce que cette démo prouve ?",
-      a: `<p>J'ai construit un <strong>agent LLM interactif</strong> déployé en ligne qui démontre 4 compétences :</p>
+      q: "Que fais cette démo ?",
+      a: `<p>Ceci un <strong>agent LLM interactif</strong> déployé en ligne qui démontre 4 compétences :</p>
           <div class="methods">
             <div class="method">
               <div class="m-tag">🔧 Outils</div>
