@@ -31,7 +31,7 @@ window.MODULES.push({
               <p>Donne-lui un objectif complexe, il le décompose en étapes structurées avant d'agir.</p>
             </div>
           </div>
-          <p style="margin-top:16px"><strong>👉 <a href="https://TON-LIEN-STREAMLIT.streamlit.app" target="_blank" style="color:#2d6a4f">Tester l'agent en ligne</a></strong> (remplace le lien après déploiement)</p>`
+          <p style="margin-top:16px"><strong>👉 <a href="https://apprentissagellm-agent.streamlit.app/" target="_blank" style="color:#2d6a4f">Tester l'agent en ligne</a></strong> (remplace le lien après déploiement)</p>`
     },
     {
       q: "Comment l'agent fonctionne-t-il techniquement ?",
