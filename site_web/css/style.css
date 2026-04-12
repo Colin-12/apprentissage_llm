@@ -1,13 +1,13 @@
 /* ═══════════════════════════════════════
    Mon Parcours LLM — Stylesheet
    ═══════════════════════════════════════ */
- 
+
 *, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
- 
+
 :root {
   --bg: #faf8f4;
   --surface: #ffffff;
@@ -29,18 +29,18 @@
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
   --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
- 
+
 html {
   scroll-behavior: smooth;
 }
- 
+
 body {
   font-family: 'Outfit', sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.7;
 }
- 
+
 /* Subtle paper grain */
 body::before {
   content: '';
@@ -50,16 +50,16 @@ body::before {
   pointer-events: none;
   z-index: 0;
 }
- 
- 
+
+
 /* ── Hero ─────────────────────────────── */
- 
+
 .hero {
   position: relative;
   padding: 72px 24px 48px;
   text-align: center;
 }
- 
+
 .hero-badge {
   display: inline-flex;
   align-items: center;
@@ -74,7 +74,7 @@ body::before {
   border-radius: 100px;
   margin-bottom: 20px;
 }
- 
+
 .hero-badge .pulse {
   width: 6px;
   height: 6px;
@@ -82,12 +82,12 @@ body::before {
   border-radius: 50%;
   animation: pulse 2s infinite;
 }
- 
+
 @keyframes pulse {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.3; }
 }
- 
+
 .hero h1 {
   font-family: 'Fraunces', serif;
   font-size: clamp(2rem, 5vw, 3.2rem);
@@ -95,7 +95,7 @@ body::before {
   letter-spacing: -0.02em;
   margin-bottom: 12px;
 }
- 
+
 .hero h1 strong {
   font-weight: 700;
   background: linear-gradient(135deg, var(--accent), var(--blue));
@@ -103,7 +103,7 @@ body::before {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
- 
+
 .hero .subtitle {
   color: var(--text-dim);
   font-size: 1rem;
@@ -111,10 +111,10 @@ body::before {
   max-width: 440px;
   margin: 0 auto;
 }
- 
- 
+
+
 /* ── Progress Strip ──────────────────── */
- 
+
 .progress-strip {
   max-width: 680px;
   margin: 32px auto 0;
@@ -122,7 +122,7 @@ body::before {
   display: flex;
   gap: 6px;
 }
- 
+
 .progress-strip .seg {
   flex: 1;
   height: 4px;
@@ -130,25 +130,25 @@ body::before {
   background: var(--border);
   transition: background 0.5s;
 }
- 
+
 .progress-strip .seg.done {
   background: var(--accent);
 }
- 
+
 .progress-strip .seg.active {
   background: linear-gradient(90deg, var(--accent), var(--warm));
 }
- 
- 
+
+
 /* ── Roadmap / Timeline ──────────────── */
- 
+
 .roadmap {
   max-width: 700px;
   margin: 0 auto;
   padding: 56px 24px 100px;
   position: relative;
 }
- 
+
 .roadmap::before {
   content: '';
   position: absolute;
@@ -158,14 +158,14 @@ body::before {
   width: 2px;
   background: var(--border);
 }
- 
+
 @media (max-width: 600px) {
   .roadmap::before { left: 27px; }
 }
- 
- 
+
+
 /* ── Module Block ────────────────────── */
- 
+
 .module {
   position: relative;
   margin-bottom: 48px;
@@ -174,16 +174,16 @@ body::before {
   transform: translateY(24px);
   transition: all 0.6s ease;
 }
- 
+
 .module.visible {
   opacity: 1;
   transform: translateY(0);
 }
- 
+
 @media (max-width: 600px) {
   .module { padding-left: 60px; }
 }
- 
+
 /* Timeline dot */
 .module-dot {
   position: absolute;
@@ -200,33 +200,33 @@ body::before {
   z-index: 2;
   transition: all 0.4s;
 }
- 
+
 @media (max-width: 600px) {
   .module-dot { left: 16px; }
 }
- 
+
 .module.completed .module-dot {
   background: var(--accent);
   border-color: var(--accent);
 }
- 
+
 .module.completed .module-dot::after {
   content: '✓';
   color: #fff;
   font-size: 0.7rem;
   font-weight: 700;
 }
- 
+
 .module.active .module-dot {
   border-color: var(--warm);
   background: var(--warm-light);
 }
- 
+
 .module.locked .module-dot {
   background: var(--locked-bg);
   border-color: var(--locked);
 }
- 
+
 /* Module header */
 .module-number {
   font-size: 0.68rem;
@@ -236,10 +236,10 @@ body::before {
   color: var(--text-light);
   margin-bottom: 4px;
 }
- 
+
 .module.completed .module-number { color: var(--accent); }
 .module.active .module-number { color: var(--warm); }
- 
+
 .module-title {
   font-family: 'Fraunces', serif;
   font-size: 1.35rem;
@@ -247,12 +247,12 @@ body::before {
   margin-bottom: 16px;
   letter-spacing: -0.01em;
 }
- 
+
 .module.locked .module-title { color: var(--locked); }
- 
- 
+
+
 /* ── Q&A Cards ───────────────────────── */
- 
+
 .qa {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -262,12 +262,12 @@ body::before {
   overflow: hidden;
   transition: box-shadow 0.3s, border-color 0.3s;
 }
- 
+
 .qa:hover {
   box-shadow: var(--shadow-md);
   border-color: #d5d0c8;
 }
- 
+
 .qa-q {
   padding: 18px 22px;
   cursor: pointer;
@@ -276,11 +276,11 @@ body::before {
   gap: 12px;
   user-select: none;
 }
- 
+
 .qa-q:hover {
   background: rgba(0, 0, 0, 0.015);
 }
- 
+
 .q-num {
   flex-shrink: 0;
   width: 28px;
@@ -295,14 +295,14 @@ body::before {
   font-weight: 600;
   margin-top: 1px;
 }
- 
+
 .q-label {
   flex: 1;
   font-weight: 500;
   font-size: 0.92rem;
   line-height: 1.5;
 }
- 
+
 .q-arrow {
   flex-shrink: 0;
   width: 20px;
@@ -311,47 +311,47 @@ body::before {
   transition: transform 0.35s ease, color 0.3s;
   margin-top: 3px;
 }
- 
+
 .qa.open .q-arrow {
   transform: rotate(180deg);
   color: var(--accent);
 }
- 
+
 /* Smooth expand */
 .qa-a {
   display: grid;
   grid-template-rows: 0fr;
   transition: grid-template-rows 0.4s ease;
 }
- 
+
 .qa.open .qa-a {
   grid-template-rows: 1fr;
 }
- 
+
 .qa-a-inner {
   overflow: hidden;
 }
- 
+
 .qa-a-content {
   padding: 0 22px 20px 62px;
   font-size: 0.88rem;
   color: var(--text-dim);
   line-height: 1.8;
 }
- 
+
 .qa-a-content p {
   margin-bottom: 10px;
 }
- 
+
 .qa-a-content p:last-child {
   margin-bottom: 0;
 }
- 
+
 .qa-a-content strong {
   color: var(--text);
   font-weight: 500;
 }
- 
+
 .qa-a-content .tag {
   display: inline-block;
   background: var(--accent-light);
@@ -361,7 +361,7 @@ body::before {
   font-size: 0.8rem;
   font-weight: 500;
 }
- 
+
 .qa-a-content .concept {
   display: inline-block;
   background: var(--blue-light);
@@ -371,17 +371,17 @@ body::before {
   font-size: 0.8rem;
   font-weight: 500;
 }
- 
- 
+
+
 /* ── Code Blocks ─────────────────────── */
- 
+
 .code {
   background: var(--code-bg);
   border-radius: 12px;
   margin: 14px 0;
   overflow: hidden;
 }
- 
+
 .code-top {
   display: flex;
   justify-content: space-between;
@@ -389,7 +389,7 @@ body::before {
   padding: 8px 14px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
- 
+
 .code-lang {
   font-size: 0.65rem;
   font-weight: 600;
@@ -397,7 +397,7 @@ body::before {
   letter-spacing: 0.1em;
   color: rgba(255, 255, 255, 0.35);
 }
- 
+
 .code pre {
   padding: 14px;
   overflow-x: auto;
@@ -406,26 +406,26 @@ body::before {
   line-height: 1.7;
   color: #cdd6f4;
 }
- 
+
 .code .kw { color: #cba6f7; }
 .code .fn { color: #89b4fa; }
 .code .str { color: #a6e3a1; }
 .code .cm { color: #6c7086; font-style: italic; }
- 
- 
+
+
 /* ── Method Grid ─────────────────────── */
- 
+
 .methods {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
   margin-top: 14px;
 }
- 
+
 @media (max-width: 560px) {
   .methods { grid-template-columns: 1fr; }
 }
- 
+
 .method {
   background: var(--surface2);
   border-radius: 12px;
@@ -433,11 +433,11 @@ body::before {
   border: 1px solid var(--border);
   transition: transform 0.2s;
 }
- 
+
 .method:hover {
   transform: translateY(-2px);
 }
- 
+
 .method .m-tag {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.7rem;
@@ -445,29 +445,29 @@ body::before {
   color: var(--accent);
   margin-bottom: 4px;
 }
- 
+
 .method h4 {
   font-size: 0.82rem;
   margin-bottom: 6px;
   font-weight: 500;
 }
- 
+
 .method p {
   font-size: 0.78rem;
   color: var(--text-dim);
   line-height: 1.6;
 }
- 
- 
+
+
 /* ── Comparison Table ────────────────── */
- 
+
 .compare-table {
   width: 100%;
   border-collapse: collapse;
   margin: 14px 0;
   font-size: 0.82rem;
 }
- 
+
 .compare-table th {
   text-align: left;
   padding: 10px 14px;
@@ -479,21 +479,21 @@ body::before {
   letter-spacing: 0.06em;
   color: var(--text-dim);
 }
- 
+
 .compare-table td {
   padding: 10px 14px;
   border-bottom: 1px solid var(--border);
   color: var(--text-dim);
   line-height: 1.5;
 }
- 
+
 .compare-table tr:last-child td {
   border-bottom: none;
 }
- 
- 
+
+
 /* ── Locked Cards ────────────────────── */
- 
+
 .locked-card {
   background: var(--locked-bg);
   border: 1.5px dashed var(--locked);
@@ -504,30 +504,30 @@ body::before {
   align-items: center;
   gap: 12px;
 }
- 
+
 .module.active .locked-card {
   background: var(--warm-light);
   border-color: var(--warm);
 }
- 
+
 .module.locked .locked-card {
   opacity: 0.6;
 }
- 
+
 .locked-icon {
   flex-shrink: 0;
   font-size: 1rem;
 }
- 
+
 .locked-text {
   font-size: 0.88rem;
   color: var(--text-dim);
 }
- 
+
 .module.locked .locked-text {
   color: var(--locked);
 }
- 
+
 .locked-text .badge {
   font-size: 0.65rem;
   font-weight: 600;
@@ -538,13 +538,23 @@ body::before {
   margin-left: 8px;
   vertical-align: middle;
 }
- 
+
 .module.active .badge {
   background: rgba(201, 123, 58, 0.15);
   color: var(--warm);
 }
- 
+
 .module.locked .badge {
   background: var(--border);
   color: var(--locked);
+}
+
+
+/* ── Footer ──────────────────────────── */
+
+.foot {
+  text-align: center;
+  padding: 40px 24px 60px;
+  color: var(--text-light);
+  font-size: 0.78rem;
 }
